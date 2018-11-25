@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="icon.png">
+    <title>IPAM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="title">
+        <h1>IP ADDRESS MANAGEMENT</h1>
+        <h3>background info:</h3>
+        <p>In particular, the 32-bit IPv4 and 128-bit IPv6 schemes. IPv4 was further divided into five classes A, B, C, D, E, 
+        which differ both function as well as division between prefix and suffix, as well as a “classless” model which has
+        an “arbitrary” boundary (specified by a “mask”) between prefix and suffix. 
+        i will assume these are all “public addresses” that need to be globally unique – at least in conjunction with the
+        network mask – as opposed to the private addresses which were separately discussed. </p>
+        <p>The goal is to provide an interface for assigning and managing IP addresses for the various types described above.</p>
+    </div>
+    <div class="content">
+        <div class="options">
+
+            <select class="form-control settings" id="ip-type">
+                <option>IP4</option>
+                <option>IP6</option>
+            </select>
+            <select class="form-control settings" id="ip-class-option">
+                <option>CLASS</option>
+                <option>CLASSLESS</option>
+            </select>
+            <select class="form-control settings" id="ip-class">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+                <option>E</option>
+            </select>
+            <select class="form-control settings" id="ip-mask" disabled>
+                <option>225.0.0.0</option>
+                <option>225.128.0.0</option>
+                <option>225.192.0.0</option>
+                <option>225.224.0.0</option>
+                <option>225.240.0.0</option>
+                <option>225.248.0.0</option>
+                <option>225.252.0.0</option>
+                <option>225.254.0.0</option>
+                <option>225.255.0.0</option>
+                <option>225.255.128.0</option>
+                <option>225.255.192.0</option>
+                <option>225.255.224.0</option>
+                <option>225.255.240.0</option>
+                <option>225.255.248.0</option>
+                <option>225.255.252.0</option>
+                <option>225.255.254.0</option>
+                <option>225.255.255.0</option>
+                <option>225.255.255.128</option>
+                <option>225.255.255.192</option>
+                <option>225.255.255.224</option>
+                <option>225.255.255.240</option>
+                <option>225.255.255.248</option>
+                <option>225.255.255.252</option>
+            </select>
+            <div class="settings form-group" style="width: 100px">
+                <input type="text" class="form-control" id="ip-number">
+            </div>
+            <div class="settings form-group">
+                <button type="button" class="btn btn-info" id="ip-assign-btn">ASSIGN IP ADDRESSES</button>
+            </div>
+            <div class="settings form-group">
+                <button type="button" class="btn btn-danger" id="clear-btn">STORAGE CLEAR</button>
+            </div>
+        </div>
+        <div class="status">
+        </div>
+        <div class="ip-list row">
+            <img class="img" src="background.jpg"/>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js.js"></script>
+</html>
